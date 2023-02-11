@@ -19,7 +19,7 @@ x-tinode-env-vars: &tinode-env-vars
   "PPROF_URL": "/pprof"
   # You can provide your own tinode config by setting EXT_CONFIG env var and binding your configuration file to
   # "EXT_CONFIG": "/etc/tinode/tinode.conf"
-  "WAIT_FOR": "mysql:3306"
+  "WAIT_FOR": "mysql1:3306"
   # Push notifications.
   # Modify as appropriate.
   # Tinode Push Gateway configuration.
@@ -61,7 +61,7 @@ x-exporter-env-vars: &exporter-env-vars
 services:
   db:
     image: mysql:5.7
-    container_name: mysql
+    container_name: mysql1
     restart: always
     # Use your own volume.
     # volumes:
