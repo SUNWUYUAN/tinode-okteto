@@ -14,7 +14,7 @@ x-tinode:
   image: tinode/tinode:latest
   restart: always
   links:
-    - "db:localhost"
+    - "db:mysql"
 
 x-tinode-env-vars: &tinode-env-vars
   "STORE_USE_ADAPTER": "mysql"
